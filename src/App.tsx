@@ -4,7 +4,6 @@ import Hero from './components/Hero';
 import TrustedTechnologies from './components/TrustedTechnologies';
 import About from './components/About';
 import Skills from './components/Skills';
-import ExperienceTimeline from './components/ExperienceTimeline';
 import Projects from './components/Projects';
 import Education from './components/Education';
 import Certifications from './components/Certifications';
@@ -59,7 +58,6 @@ function App() {
           <TrustedTechnologies />
           <About />
           <Skills />
-          <ExperienceTimeline />
           <Projects />
           <Education />
           <Certifications />

@@ -84,7 +84,7 @@ const About = () => {
               style={{ rotateX, rotateY }}
               className="relative rounded-3xl overflow-hidden glass border-cardBorder shadow-2xl group transform-gpu"
             >
-              <img src={profilePhoto} alt="Prasad Dayal" className="w-full h-auto object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100" />
+              <img src={profilePhoto} alt="Prasad Dayal" className="w-full h-auto object-cover scale-105 group-hover:scale-100 transition-transform duration-700" />
               <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </motion.div>
           </motion.div>

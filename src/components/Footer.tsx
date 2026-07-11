@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Github, Linkedin, Mail, Twitter } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -17,9 +18,8 @@ const Footer = () => {
         <div className="flex gap-6 mb-12">
           {[
             { icon: Github, href: "https://github.com/PrasadDayal" },
-            { icon: Linkedin, href: "#" },
-            { icon: Twitter, href: "#" },
-            { icon: Mail, href: "mailto:prasad@example.com" }
+            { icon: Linkedin, href: "https://www.linkedin.com/in/prasaddayal" },
+            { icon: Mail, href: "mailto:prasaddayal71234@gmail.com" }
           ].map((social, idx) => (
             <motion.a
               key={idx}
