@@ -10,9 +10,9 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        primary: "#38BDF8", // Sky Blue
-        secondary: "#818CF8", // Indigo
-        accent: "#F8FAFC", // Ghost White
+        primary: "#2563eb",
+        secondary: "#64748b",
+        accent: "#0f172a",
         card: "var(--card)",
         cardBorder: "var(--card-border)",
       },

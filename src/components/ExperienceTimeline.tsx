@@ -1,82 +1,90 @@
-import React, { useRef } from 'react';
-import { motion, useScroll, useSpring } from 'framer-motion';
+import React from 'react';
+import { motion } from 'framer-motion';
+import { BookOpen, Briefcase, GraduationCap, Code2, Globe, Server, Database } from 'lucide-react';
 
-const experiences = [
-  {
-    month: 'Jan 2025 - Feb 2025',
-    role: 'Full-Stack Web Developer',
-    company: 'NeLeap IT and Training Solutions',
-    desc: 'Led the migration of legacy monolith to microservices using Spring Boot and React.',
+const milestones = [
+  { 
+    date: '2022 - Present', 
+    title: 'Computer Engineering', 
+    company: 'SPPU',
+    icon: GraduationCap,
+    desc: 'Pursuing B.E in Computer Engineering with a focus on Software Architecture and Algorithms.',
+    tags: ['DSA', 'OOPs', 'Operating Systems']
   },
-  {
-    year: '2021 - 2023',
-    role: 'Backend Engineer',
-    company: 'DataFlow Systems',
-    desc: 'Optimized MySQL queries reducing latency by 40% for high-traffic financial APIs.',
+  { 
+    date: '2023', 
+    title: 'Java Developer Path', 
+    company: 'Self-Directed',
+    icon: Code2,
+    desc: 'Mastered Java fundamentals and started building command-line applications and utility tools.',
+    tags: ['Core Java', 'Collections', 'Multithreading']
   },
-  {
-    year: '2019 - 2021',
-    role: 'Full-Stack Developer',
-    company: 'InnoWeb Agency',
-    desc: 'Built responsive web applications for various clients using React and Node.js.',
+  { 
+    date: '2024', 
+    title: 'Backend Engineering', 
+    company: 'Project Focus',
+    icon: Server,
+    desc: 'Developed scalable microservices using Spring Boot, focusing on RESTful design and security.',
+    tags: ['Spring Boot', 'Hibernate', 'JWT']
+  },
+  { 
+    date: '2025', 
+    title: 'Full Stack & Cloud', 
+    company: 'Portfolio',
+    icon: Globe,
+    desc: 'Integrated React frontend with Java backends and explored AWS for deployment and hosting.',
+    tags: ['React', 'AWS', 'Docker']
   },
 ];
 
 const ExperienceTimeline = () => {
-  const containerRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start center", "end center"]
-  });
-
-  const scaleY = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
-    restDelta: 0.001
-  });
-
   return (
-    <section id="experience" className="py-24 px-6 bg-[#0c0c0c]">
+    <section id="experience" className="py-28 px-6 bg-background relative overflow-hidden">
+      <div className="absolute top-1/2 right-0 w-96 h-96 bg-primary/5 blur-[150px] rounded-full -z-10" />
+      
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold mb-20 text-center">My <span className="text-gradient">Journey</span></h2>
+        <h2 className="text-3xl md:text-5xl font-bold mb-20 text-center">
+          My <span className="text-gradient">Journey</span>
+        </h2>
 
-        <div ref={containerRef} className="relative">
-          {/* Timeline Line */}
-          <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-1 bg-white/5 -translate-x-1/2" />
-          <motion.div 
-            style={{ scaleY }}
-            className="absolute left-0 md:left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-primary via-secondary to-accent -translate-x-1/2 origin-top"
-          />
+        <div className="relative border-l border-cardBorder ml-4 md:ml-0 md:left-1/2 md:-translate-x-px">
+          {milestones.map((milestone, idx) => (
+            <motion.div
+              key={idx}
+              initial={{ opacity: 0, x: idx % 2 === 0 ? -50 : 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: idx * 0.1 }}
+              className={`relative mb-16 md:w-1/2 ${idx % 2 === 0 ? 'md:pr-12 md:text-right md:ml-0' : 'md:pl-12 md:ml-auto'}`}
+            >
+              {/* Dot */}
+              <div className="absolute top-0 left-0 -translate-x-1/2 md:left-auto md:right-0 md:translate-x-1/2 w-4 h-4 rounded-full bg-primary border-4 border-background z-10 shadow-[0_0_10px_rgba(var(--primary-rgb),0.5)]" />
 
-          <div className="space-y-24">
-            {experiences.map((exp, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: idx * 0.2 }}
-                className={`relative flex flex-col md:flex-row gap-8 ${
-                  idx % 2 === 0 ? 'md:flex-row-reverse' : ''
-                }`}
-              >
-                {/* Dot */}
-                <div className="absolute left-0 md:left-1/2 top-2 w-4 h-4 rounded-full bg-primary border-4 border-background -translate-x-1/2 z-10" />
-
-                <div className="md:w-1/2 pl-8 md:pl-0">
-                  <div className={`glass p-8 rounded-3xl border-white/5 hover:border-primary/30 transition-colors ${
-                    idx % 2 === 0 ? 'text-left' : 'md:text-right'
-                  }`}>
-                    <span className="text-primary font-mono text-sm mb-2 block">{exp.year}</span>
-                    <h3 className="text-2xl font-bold mb-1">{exp.role}</h3>
-                    <h4 className="text-gray-400 font-medium mb-4">{exp.company}</h4>
-                    <p className="text-gray-500 text-sm leading-relaxed">{exp.desc}</p>
+              {/* Content */}
+              <div className="glass p-8 rounded-3xl border-cardBorder hover:border-primary/30 transition-all group">
+                <div className={`flex items-center gap-4 mb-4 ${idx % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
+                  <div className="p-3 rounded-2xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500">
+                    <milestone.icon size={24} />
+                  </div>
+                  <div>
+                    <span className="text-sm font-mono text-primary font-bold">{milestone.date}</span>
+                    <h3 className="text-xl font-bold">{milestone.title}</h3>
                   </div>
                 </div>
-                <div className="hidden md:block md:w-1/2" />
-              </motion.div>
-            ))}
-          </div>
+                
+                <p className="text-foreground/40 text-xs font-bold uppercase tracking-wider mb-4">{milestone.company}</p>
+                <p className="text-foreground/70 leading-relaxed mb-6">{milestone.desc}</p>
+                
+                <div className={`flex flex-wrap gap-2 ${idx % 2 === 0 ? 'md:justify-end' : ''}`}>
+                  {milestone.tags.map(tag => (
+                    <span key={tag} className="px-3 py-1 rounded-full glass border-cardBorder text-[10px] font-semibold uppercase tracking-wider text-foreground/50">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>

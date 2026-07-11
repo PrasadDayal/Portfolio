@@ -36,12 +36,12 @@ const projects = [
 
 const BentoProjects = () => {
   return (
-    <section id="projects" className="py-24 px-6 bg-[#0c0c0c]">
+    <section id="projects" className="py-24 px-6 bg-background">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
           <div>
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Featured <span className="text-gradient">Projects</span></h2>
-            <p className="text-gray-400">A collection of systems designed to scale.</p>
+            <p className="text-foreground/60">A collection of systems designed to scale.</p>
           </div>
         </div>
 
@@ -55,7 +55,7 @@ const BentoProjects = () => {
               transition={{ delay: idx * 0.1 }}
               whileHover={{ scale: 1.02 }}
               className={cn(
-                "glass rounded-3xl p-8 relative overflow-hidden group border-white/5",
+                "glass rounded-3xl p-8 relative overflow-hidden group border-cardBorder",
                 project.size === 'large' ? "md:col-span-2 md:row-span-2" : "",
                 project.size === 'medium' ? "md:col-span-2" : ""
               )}
@@ -64,13 +64,13 @@ const BentoProjects = () => {
               
               <div className="relative h-full flex flex-col justify-between z-10">
                 <div>
-                  <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
-                  <p className="text-gray-400 text-sm max-w-xs">{project.description}</p>
+                  <h3 className="text-2xl font-bold mb-2 text-foreground">{project.title}</h3>
+                  <p className="text-foreground/60 text-sm max-w-xs">{project.description}</p>
                 </div>
 
                 <div className="flex flex-wrap gap-2 mt-4">
                   {project.tags.map(tag => (
-                    <span key={tag} className="px-3 py-1 rounded-full bg-white/10 text-xs font-medium border border-white/5">
+                    <span key={tag} className="px-3 py-1 rounded-full bg-foreground/5 text-xs font-medium border border-cardBorder">
                       {tag}
                     </span>
                   ))}
@@ -80,7 +80,7 @@ const BentoProjects = () => {
                   <button className="flex items-center gap-2 text-sm font-bold text-primary">
                     <Github size={18} /> View Code
                   </button>
-                  <button className="flex items-center gap-2 text-sm font-bold text-white">
+                  <button className="flex items-center gap-2 text-sm font-bold text-foreground">
                     <ExternalLink size={18} /> Live Demo
                   </button>
                 </div>

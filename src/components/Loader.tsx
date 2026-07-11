@@ -26,7 +26,7 @@ const Loader = ({ onComplete }: { onComplete: () => void }) => {
       transition={{ duration: 0.5, ease: "easeInOut" }}
       className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-background text-foreground"
     >
-      <div className="w-64 h-2 bg-gray-200 dark:bg-gray-800 rounded-full overflow-hidden mb-4 border border-cardBorder">
+      <div className="w-64 h-2 bg-foreground/5 dark:bg-white/5 rounded-full overflow-hidden mb-4 border border-cardBorder">
         <motion.div
           className="h-full bg-gradient-to-r from-primary via-secondary to-accent"
           initial={{ width: '0%' }}
