@@ -2,32 +2,40 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const Footer = () => {
-  const competencies = [
-    "Java Backend Engineering", "Spring Boot", "Microservices Architecture", "React.js", "MySQL", 
-    "System Design", "REST APIs", "AWS Cloud", "Docker", "TypeScript", "Full Stack Development"
-  ];
-
   return (
-    <footer className="relative py-12 border-t border-cardBorder overflow-hidden">
-      {/* Continuous Marquee Ticker */}
-      <div className="absolute top-0 left-0 w-full py-4 bg-primary/5 border-b border-cardBorder overflow-hidden">
-        <motion.div 
-          animate={{ x: [0, -1000] }}
-          transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-          className="flex whitespace-nowrap gap-12 items-center"
+    <footer className="py-16 px-6 bg-background border-t border-card-border">
+      <div className="max-w-7xl mx-auto flex flex-col items-center">
+        <motion.h2 
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-2xl font-black tracking-tighter text-foreground mb-8"
         >
-          {[...competencies, ...competencies].map((item, idx) => (
-            <span key={idx} className="text-[10px] font-black uppercase tracking-[0.3em] text-foreground/40 flex items-center gap-3">
-              <span className="w-1 h-1 bg-primary rounded-full" />
-              {item}
-            </span>
-          ))}
-        </motion.div>
-      </div>
+          PRASAD<span className="text-accent-primary">.</span>
+        </motion.h2>
 
-      <div className="max-w-7xl mx-auto px-6 pt-12 text-center">
-        <p className="text-sm text-foreground/50 font-medium tracking-wide">
-          © {new Date().getFullYear()} Prasad Dayal. <span className="text-primary">Built with passion and precision.</span>
+        <div className="flex gap-6 mb-12">
+          {[
+            { icon: Github, href: "https://github.com/PrasadDayal" },
+            { icon: Linkedin, href: "#" },
+            { icon: Twitter, href: "#" },
+            { icon: Mail, href: "mailto:prasad@example.com" }
+          ].map((social, idx) => (
+            <motion.a
+              key={idx}
+              href={social.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ y: -5, color: "var(--accent-primary)" }}
+              className="text-text-muted transition-colors"
+            >
+              <social.icon size={24} />
+            </motion.a>
+          ))}
+        </div>
+
+        <p className="text-text-muted text-sm font-medium">
+          © {new Date().getFullYear()} | Designed & Working by <span className="text-foreground font-bold">Prasad Dayal</span>
         </p>
       </div>
     </footer>
