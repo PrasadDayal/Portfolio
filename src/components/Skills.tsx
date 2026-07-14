@@ -12,7 +12,8 @@ import {
   GitBranch, 
   Palette,
   Cloud,
-  Box
+  Box,
+  Puzzle
 } from 'lucide-react';
 
 const skills = [
@@ -21,8 +22,8 @@ const skills = [
   { name: 'React', icon: Globe, color: '#61dbfb' },
   { name: 'MySQL', icon: Database, color: '#00758f' },
   { name: 'Docker', icon: Layers, color: '#2496ed' },
-  { name: 'AWS', icon: Cloud, color: '#ff9900' },
-  { name: 'TypeScript', icon: Code2, color: '#3178c6' },
+  { name: 'Bootstrap', icon: Box, color: '#563d7c' },
+  { name: 'Python', icon: Puzzle, color: '#3178c6' },
   { name: 'JavaScript', icon: Code2, color: '#f7df1e' },
   { name: 'HTML', icon: Globe, color: '#e34c26' },
   { name: 'CSS', icon: Palette, color: '#264de4' },

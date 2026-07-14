@@ -77,7 +77,7 @@ const Navbar = ({ theme, toggleTheme }: { theme: string, toggleTheme: () => void
                 <a
                   key={link.name}
                   href={link.href}
-                  className={`text-sm font-bold tracking-tight transition-colors hover:text-accent-primary ${
+                  className={`text-base font-bold tracking-tight transition-colors hover:text-accent-primary ${
                     isActive ? 'text-accent-primary' : 'text-foreground/60'
                   }`}
                 >
@@ -99,7 +99,7 @@ const Navbar = ({ theme, toggleTheme }: { theme: string, toggleTheme: () => void
                 href={resumeUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-primary py-2 px-6 text-sm"
+                className="btn-primary py-2 px-6 text-base"
               >
                 Resume
               </a>

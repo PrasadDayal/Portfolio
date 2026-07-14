@@ -76,13 +76,13 @@ const About = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1, ease: "easeOut" }}
-            className="perspective-1000"
+            className="perspective-1000 flex justify-center items-center w-full"
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
           >
             <motion.div 
               style={{ rotateX, rotateY }}
-              className="relative rounded-3xl overflow-hidden glass border-cardBorder shadow-2xl group transform-gpu"
+              className="relative w-full max-w-[320px] mx-auto rounded-3xl overflow-hidden glass border-cardBorder shadow-2xl group transform-gpu"
             >
               <img src={profilePhoto} alt="Prasad Dayal" className="w-full h-auto object-cover scale-105 group-hover:scale-100 transition-transform duration-700" />
               <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -106,7 +106,7 @@ const About = () => {
                 Who I Am
               </h3>
               <p className="text-foreground/70 leading-relaxed mb-6 text-lg">
-                I'm a <span className="text-foreground font-semibold">Computer Engineering</span> student and an aspiring Full-Stack Developer with a deep focus on <span className="text-primary font-bold">Backend Architecture</span>.
+                I'm a <span className="text-foreground font-semibold">Computer Engineering</span> Graduate and an aspiring Full-Stack Developer with a deep focus on <span className="text-primary font-bold">Backend Architecture</span>.
               </p>
               <p className="text-foreground/70 leading-relaxed text-lg">
                 I specialize in building robust systems using Java and Spring Boot, while maintaining a strong grasp of modern frontend technologies to deliver cohesive digital experiences.
@@ -116,10 +116,10 @@ const About = () => {
             {/* Statistics */}
             <div className="grid grid-cols-2 gap-6">
               {[
-                { to: 15, label: "Projects", icon: Rocket },
-                { to: 100, label: "LeetCode", icon: BrainCircuit },
+                { to: 8.75 , label: "CGPA", icon: Rocket },
+                { to: 10, label: "Projects", icon: BrainCircuit },
                 { to: 10, label: "Tech Stack", icon: Code2 },
-                { to: 2, label: "Experience", icon: Award }
+          
               ].map((stat, idx) => (
                 <motion.div 
                   key={idx}

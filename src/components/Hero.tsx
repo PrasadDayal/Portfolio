@@ -99,7 +99,7 @@ const Hero = () => {
           transition={{ delay: 0.4 }}
           className="text-2xl md:text-4xl font-semibold text-text-muted mb-12 h-16"
         >
-          I Am Into <span className="text-gradient font-bold">{displayedText}</span>
+          I Am <span className="text-gradient font-bold">{displayedText}</span>
           <span className="inline-block w-[3px] h-8 md:h-10 bg-blue-500 ml-2 animate-pulse" />
         </motion.div>
         
@@ -109,8 +109,8 @@ const Hero = () => {
           transition={{ delay: 0.5 }}
           className="flex gap-4 justify-center"
         >
-          <a href="#projects" className="btn-primary">
-            View My Work
+          <a href="#contact" className="btn-primary">
+            Get In Touch
           </a>
           <a href="https://drive.google.com/file/d/1bXs7wkVWyKDInvVeUoKw7CqFc2DUYKB6/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="btn-secondary">
             View Resume

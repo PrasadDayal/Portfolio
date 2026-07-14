@@ -158,7 +158,7 @@ const Contact = () => {
                       name="user_name"
                       type="text"
                       className="w-full bg-foreground/5 border border-cardBorder rounded-xl px-4 py-3.5 focus:outline-none focus:border-primary/50 focus:bg-background transition-all text-foreground text-sm font-medium" 
-                      placeholder="E.g., Jane Doe"
+                      placeholder="Enter Name"
                     />
                   </div>
                   <div>
@@ -168,7 +168,7 @@ const Contact = () => {
                       name="user_email"
                       type="email"
                       className="w-full bg-foreground/5 border border-cardBorder rounded-xl px-4 py-3.5 focus:outline-none focus:border-primary/50 focus:bg-background transition-all text-foreground text-sm font-medium" 
-                      placeholder="E.g., jane@example.com"
+                      placeholder="Enter Email"
                     />
                   </div>
                 </div>

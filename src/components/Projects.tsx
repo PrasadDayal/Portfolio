@@ -4,6 +4,7 @@ import { Github, ExternalLink, Code2 } from 'lucide-react';
 import StoreSyncImg from '../assets/StoreSync.png';
 import ExpenseTrackerImg from '../assets/ExpenseTracker.png';
 import kitchenIQImg from '../assets/KitchenIQ.png';
+import MahaTourism from '../assets/MahaTourism.png';
 
 const projects = [
   {
@@ -28,6 +29,14 @@ const projects = [
     tags: ['React', 'TypeScript', 'Chart.js'],
     image: ExpenseTrackerImg,
     github: 'https://github.com/PrasadDayal/Expense-Tracker',
+    demo: '#',
+  },
+  {
+    title: 'AI Powered MahaTourism',
+    description: 'An intelligent tourism platform that helps travelers discover destinations, generate personalized itineraries, receive AI recommendations, and explore Maharashtra efficiently.',
+    tags: ['Spring Boot', 'React', 'MySQL'],
+    image: MahaTourism,
+    github: 'https://github.com/PrasadDayal/MahaTourism',
     demo: '#',
   },
 ];
