@@ -5,6 +5,7 @@ import StoreSyncImg from '../assets/StoreSync.png';
 import ExpenseTrackerImg from '../assets/ExpenseTracker.png';
 import kitchenIQImg from '../assets/KitchenIQ.png';
 import MahaTourism from '../assets/MahaTourism.png';
+import hospitalManagementSystemImg from '../assets/HospitalManagement.png';
 
 const projects = [
   {
@@ -37,6 +38,14 @@ const projects = [
     tags: ['Spring Boot', 'React', 'MySQL'],
     image: MahaTourism,
     github: 'https://github.com/PrasadDayal/MahaTourism',
+    demo: '#',
+  },
+  {
+    title: 'Hospital Management System',
+    description: 'A comprehensive solution for managing hospital operations, including patient records, appointments, and inventory.',
+    tags: ['Spring Boot', 'React', 'MySQL'],
+    image: hospitalManagementSystemImg,
+    github: 'https://github.com/PrasadDayal/Hospital-Management-System',
     demo: '#',
   },
 ];
