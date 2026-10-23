@@ -6,6 +6,7 @@ import ExpenseTrackerImg from '../assets/ExpenseTracker.png';
 import kitchenIQImg from '../assets/KitchenIQ.png';
 import MahaTourism from '../assets/MahaTourism.png';
 import hospitalManagementSystemImg from '../assets/HospitalManagement.png';
+import sheetiMitra from '../assets/SheetiMitra.png';
 
 const projects = [
   {
@@ -46,6 +47,15 @@ const projects = [
     tags: ['Spring Boot', 'React', 'MySQL'],
     image: hospitalManagementSystemImg,
     github: 'https://github.com/PrasadDayal/Hospital-Management-System',
+    demo: '#',
+  },
+
+  {
+    title: 'Sheeti Mitra',
+    description: 'A platform for connecting local service providers with customers, facilitating seamless communication and transactions.',
+    tags: ['React', 'Node.js', 'MongoDB'],
+    image: sheetiMitra,
+    github: '#',
     demo: '#',
   },
 ];
