@@ -52,8 +52,8 @@ const projects = [
 
   {
     title: 'Sheeti Mitra',
-    description: 'A platform for connecting local service providers with customers, facilitating seamless communication and transactions.',
-    tags: ['React', 'Node.js', 'MongoDB'],
+    description: 'The platform aims to simplify farming-related information, improve market awareness, reduce unnecessary expenses, and help farmers understand the actual profitability of their crops.',
+    tags: ['Python', 'React', 'Django', 'MySQL'],
     image: sheetiMitra,
     github: '#',
     demo: '#',
